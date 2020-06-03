@@ -10,4 +10,4 @@
 
 ## 赛题直播介绍
 
-![赛题直播介绍]()
+[赛题直播介绍](https://github.com/TheDisneyF4/Warehouse/blob/master/%E8%B5%9B%E9%A2%98%E7%9B%B4%E6%92%AD%E4%BB%8B%E7%BB%8D.pdf)
