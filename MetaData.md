@@ -17,12 +17,12 @@
 |属性名|英文|类型|示例|备注|
 |:---:|:--:|:--:|:--:|:--:|
 |车牌号|VEHICLE_PLATE_NUMBER|String|R290|
-|GPS速度|GPS_SPEED|float64|14.5|
+|GPS速度|GPS_SPEED|float64|14.5|单位：km/h|
 |行驶方向角|DRIVING_DIRECTION|int64|184|
 |卫星定位时间|GPS_DATE|String|2020/1/7 23:59|
-|经度|LONGITUDE|float64|118.135775|
-|纬度|LATITUDE|float64|24.494043|
-|运营状态|RUNNING_STATUS|int64|2|1-载客 2-空载|
+|经度|LONGITUDE|float64|118.135775|WGS84坐标系|
+|纬度|LATITUDE|float64|24.494043|WGS84坐标系|
+|运营状态|RUNNING_STATUS|int64|2|空车（1）、载客（2）、电召（4）、停运（8）、交班（16）、包车（32）|
 |海拔高度|HIT_ALTITUDE|float64|-|全为空|
 
 ## 五一假期厦门巡游车订单数据
@@ -46,14 +46,14 @@
 |:---:|:--:|:--:|:--:|:--:|
 |车牌号|VEHICLE_PLATE_NUMBER|String|L256|
 |上车时间|GETON_DATE|String|2020/1/7 23:46|
-|上车经度|GETON_LONGITUDE|float64|118.118376|
-|上车纬度|GETON_LATITUDE|float64|24.479573|
+|上车经度|GETON_LONGITUDE|float64|118.118376|CGCS2000坐标系|
+|上车纬度|GETON_LATITUDE|float64|24.479573|CGCS2000坐标系|
 |下车时间|GETOFF_DATE|String|2020/1/7 23:59|
-|下车经度|GETOFF_LONGITUDE|float64|118.086775|
-|下车纬度|GETOFF_LATITUDE|float64|24.442913|
-|计程公里|PASS_MILE|float64|7.7|
-|空驶公里|NOPASS_MILE|float64|0.6|
-|等待计时时间|WAITING_TIME|int64|188|
+|下车经度|GETOFF_LONGITUDE|float64|118.086775|CGCS2000坐标系|
+|下车纬度|GETOFF_LATITUDE|float64|24.442913|CGCS2000坐标系|
+|计程公里|PASS_MILE|float64|7.7|单位：km|
+|空驶公里|NOPASS_MILE|float64|0.6|单位：km|
+|等待计时时间|WAITING_TIME|int64|188|单位：秒|
 
 ## 普通工作日及双休日厦门巡游车订单数据
 
@@ -122,19 +122,18 @@
 |车辆号牌|VEHICLE_NO|String|25A2|
 |预计上车时间|BOOK_DEP_TIME|int64|20180115213211|
 |等待时间|WAIT_TIME|float64|0|空值较多：997行|
-|车辆出发经度|DEP_LONGITUDE|float64|118.148247|
-|车辆出发纬度|DEP_LATITUDE|float64|24.543191|
+|车辆出发经度|DEP_LONGITUDE|float64|118.148247|CGCS2000坐标系|
+|车辆出发纬度|DEP_LATITUDE|float64|24.543191|CGCS2000坐标系|
 |上车地点|DEP_AREA|String|厦门高崎国际机场|
 |上车时间|DEP_TIME|int64|20180115214118|
-|车辆到达经度|DEST_LONGITUDE|float64|118.089052|
-|车辆到达纬度|DEST_LATITUDE|float64|24.442635|
+|车辆到达经度|DEST_LONGITUDE|float64|118.089052|CGCS2000坐标系|
+|车辆到达纬度|DEST_LATITUDE|float64|24.442635|CGCS2000坐标系|
 |下车地点|DEST_AREA|String|和驿家花园酒店-西南门|
 |下车时间|DEST_TIME|int64|20180115220957|
-|载客里程|DRIVE_MILE|float64|24.9|
-|载客时间|DRIVE_TIME|int64|1719|
-|空驶里程|WAIT_MILE|float64|0|空值较多:996行|
+|载客里程|DRIVE_MILE|float64|24.9|单位：km|
+|载客时间|DRIVE_TIME|int64|1719|单位：秒|
+|空驶里程|WAIT_MILE|float64|0|空值较多:996行|单位：km|
 |订单完成时间|ORDER_MATCH_TIME|int64|20180115220957|
-|发票状态|INVOICE_STATUS|int64|0|pd不识别|
 
 ## 五一假期厦门网约车辆GPS数据
 
@@ -160,7 +159,7 @@
 |坐标系|ENCRYPT|float64|1|1：GCJ-02标准、2：WGS84 GPS标准、3：BD-09 百度标准4：CGCS2000 北斗标准、0：其他|
 |方向角|DIRECTION|float64|184|有256空行|
 |海拔高度|ELEVATION|float64|15|有256空行|
-|GPS速度|SPEED|float64|4|有256空行|
+|GPS速度|SPEED|float64|4|有256空行，单位：km/h|
 |运营状态|BIZ_STATUS|float64|1|有346空行、1：载客、2：接单、3：空驶、4：停运|
 |订单号|ORDER_ID|String|B190702082943203000|有的显示为0，还有的显示不全|
 
