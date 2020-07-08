@@ -8,3 +8,5 @@
 - [GIS资源](https://github.com/TheDisneyF4/Warehouse/tree/master/ArcGis-Resources)
 - [样例数据](https://github.com/TheDisneyF4/Warehouse/tree/master/Sample-Data)
 - [项目代码合集](https://github.com/TheDisneyF4/CodeTruck)
+- [项目最终解决方案](https://github.com/TheDisneyF4/Warehouse/tree/master/solution.pdf)
+- [初赛文档](https://github.com/TheDisneyF4/Warehouse/tree/master/documentation.pdf)
